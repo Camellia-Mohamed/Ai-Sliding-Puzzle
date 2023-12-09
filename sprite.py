@@ -6,14 +6,14 @@ import time
 
 pygame.font.init()
 image_path={
-          1:"../IcyTower_SOUNDS/images/n1.jpg",
-          3:"../IcyTower_SOUNDS/images/n3.jpg",
-          2:"../IcyTower_SOUNDS/images/n2.jpg",
-          4:"../IcyTower_SOUNDS/images/n4.jpg",
-          5:"../IcyTower_SOUNDS/images/n5.jpg",
-          6:"../IcyTower_SOUNDS/images/n6.jpg",
-          7:"../IcyTower_SOUNDS/images/n7.jpg",
-          8:"../IcyTower_SOUNDS/images/n8.jpg"
+          1:"../ICY_Tower_Puzzle/images/n1.jpg",
+          3:"../ICY_Tower_Puzzle/images/n3.jpg",
+          2:"../ICY_Tower_Puzzle/images/n2.jpg",
+          4:"../ICY_Tower_Puzzle/images/n4.jpg",
+          5:"../ICY_Tower_Puzzle/images/n5.jpg",
+          6:"../ICY_Tower_Puzzle/images/n6.jpg",
+          7:"../ICY_Tower_Puzzle/images/n7.jpg",
+          8:"../ICY_Tower_Puzzle/images/n8.jpg"
         }
 class Tile(pygame.sprite.Sprite):
     def __init__(self, game,x,y,text):
