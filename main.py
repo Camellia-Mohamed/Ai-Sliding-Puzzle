@@ -9,9 +9,9 @@ pygame.mixer.init()
 class Game:
     def __init__(self):
         pygame.init()
-        self.game_sound=pygame.mixer.Sound('../IcyTower_SOUNDS/sound/IcyTower.mp3')
-        self.amazing=pygame.mixer.Sound('../IcyTower_SOUNDS/sound/amazing.mp3')
-        self.wow=pygame.mixer.Sound('../IcyTower_SOUNDS/sound/wow.mp3')
+        self.game_sound=pygame.mixer.Sound('../ICY_Tower_Puzzle/sound/IcyTower.mp3')
+        self.amazing=pygame.mixer.Sound('../ICY_Tower_Puzzle/sound/amazing.mp3')
+        self.wow=pygame.mixer.Sound('../ICY_Tower_Puzzle/sound/wow.mp3')
         self.game_sound.play(-1)
         self.screen=pygame.display.set_mode((width,hight))
         pygame.display.set_caption(title)
