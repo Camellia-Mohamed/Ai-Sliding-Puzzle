@@ -3,44 +3,36 @@ import pygame
 from settings import *
 from algorithm import *
 import time
+import copy
 
 pygame.font.init()
-image_path={
-          1:"../ICY_Tower_Puzzle/images/n1.jpg",
-          3:"../ICY_Tower_Puzzle/images/n3.jpg",
-          2:"../ICY_Tower_Puzzle/images/n2.jpg",
-          4:"../ICY_Tower_Puzzle/images/n4.jpg",
-          5:"../ICY_Tower_Puzzle/images/n5.jpg",
-          6:"../ICY_Tower_Puzzle/images/n6.jpg",
-          7:"../ICY_Tower_Puzzle/images/n7.jpg",
-          8:"../ICY_Tower_Puzzle/images/n8.jpg"
-        }
+
 class Tile(pygame.sprite.Sprite):
-    def __init__(self, game,x,y,text):
+    def __init__(self, game,x,y,gameType,index,tilesize,gameSize):
         self.groups=game.all_sprite
         pygame.sprite.Sprite.__init__(self,self.groups)
         self.game=game
         self.image = pygame.Surface((tilesize,tilesize))
-        self.image.fill(paige)
+        self.tilesize=tilesize
+        self.image.fill(backgroud_col[gameType[0]])
         self.x,self.y=x,y
-        self.text=text
+        self.index=index
+        self.gameType=gameType
         self.clock=pygame.time.Clock()
         self.rect=self.image.get_rect()
-        if self.text:
+        if self.index :
             self.font=pygame.font.SysFont("Consoles",50)
-            surface=pygame.image.load(image_path[self.text])
+            surface=pygame.image.load(get_image(self.gameType,self.index))
             self.image.fill(white)
             self.image.blit(surface,(0,0))
-       
+        
+        
 
 
     def update(self):
-        self.rect.x=self.x*tilesize
-        self.rect.y=self.y*tilesize
+        self.rect.x=self.x*self.tilesize
+        self.rect.y=self.y*self.tilesize
         
-
-    def click(self,mouse_x,mouse_y):
-        return self.rect.left<=mouse_x<=self.rect.right and self.rect.top<=mouse_y<=self.rect.bottom
         
 
 
